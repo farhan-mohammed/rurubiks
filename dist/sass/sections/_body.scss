@@ -34,7 +34,7 @@ html {
         flex-direction: column;
         justify-content: stretch;
         align-items: stretch;
-        
+        width: 100%;
         @media (min-width: 768px) {
             width: 750px;
         }

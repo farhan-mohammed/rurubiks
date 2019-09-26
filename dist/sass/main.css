@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
 * {
   margin: 0;
   -webkit-box-sizing: border-box;
@@ -57,6 +58,7 @@ html {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -78,7 +80,7 @@ html {
 }
 
 #body-header {
-  height: 3rem;
+  height: 3.5rem;
 }
 
 #body-body {
@@ -113,7 +115,19 @@ html {
   -webkit-box-flex: 0;
       -ms-flex: 0;
           flex: 0;
-  margin-right: 3rem;
+  margin-right: .5vw;
+}
+
+@media (min-width: 500px) {
+  .header-logo {
+    margin-right: 2rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .header-logo {
+    margin-right: 4rem;
+  }
 }
 
 .header-nav {
@@ -126,7 +140,7 @@ html {
 .hl-img {
   height: 2rem;
   width: 2rem;
-  margin-right: .5rem;
+  margin: 0 .6rem;
 }
 
 .hl-title {
@@ -160,6 +174,8 @@ html {
   margin: .4rem;
   border-radius: 1px;
   margin-right: 0;
+  padding: 5px;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -169,6 +185,10 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: 'Raleway';
+  text-transform: uppercase;
+  font-weight: 200;
+  text-shadow: black 0px 3px 20px;
 }
 
 .hnav-item:nth-child(1) {

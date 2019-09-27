@@ -6,8 +6,9 @@
     @include widthSide(65vw);
     @mixin widthCarousel($x) {
         @media (min-width:$x) {
-            width:($x - 70px);
-            @include widthSide($x - 70px);   
+            $y:$x - 25px;
+            width:($y);
+            @include widthSide($y);   
         }     
     }
     // @media (min-width: 768px) {
@@ -29,10 +30,21 @@
     @include widthCarousel(900px);
     @include widthCarousel(1000px);
     @include widthCarousel(1100px);
+    @include widthCarousel(150px);
+    @include widthCarousel(250px);
+    @include widthCarousel(350px);
+    @include widthCarousel(450px);
+    @include widthCarousel(550px);
+    @include widthCarousel(650px);
+    @include widthCarousel(750px);
+    @include widthCarousel(850px);
+    @include widthCarousel(950px);
+    @include widthCarousel(1050px);
+    @include widthCarousel(1150px);
     @include widthCarousel(1200px);
     // end
-    height: 95%;
-    margin: 0 auto;
+    height: 75vh;
+    margin: auto;
     transform-style: preserve-3d;
     transition: transform 0.35s ease;
     &[data-slide="1"] {

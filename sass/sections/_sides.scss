@@ -1,0 +1,50 @@
+
+.carousel {
+    position: relative;
+    width: 75vw;
+    //Start of dirty dirty code
+    @include widthSide(65vw);
+    // @media (min-width: 768px) {
+    //     width: 750px;
+    //     @include widthSide(750px);
+    // }
+    // @media (min-width: 992px) {
+    //     width: 970px;
+    //     @include widthSide(970px);
+    // }
+    @media (min-width: 1200px) {
+        width: 1170px;
+        @include widthSide(1170px);
+    }
+    // end
+    height: 95%;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+    transition: transform 0.35s ease;
+    &[data-slide="1"] {
+        transform: rotateY(0deg);
+    }
+    &[data-slide="2"] {
+        transform: rotateY(-90deg);
+    }
+    &[data-slide="3"] {
+        transform: rotateY(-180deg);
+    }
+    &[data-slide="4"] {
+        transform: rotateY(-270deg);
+    }
+}
+
+
+// CLear fix
+.cf:before, .sides:before,
+.cf:after, .sides:after {
+  content: " ";
+  display: table;
+}
+.cf:after, .sides:after {
+  clear: both;
+}
+.cf, .sides {
+  *zoom: 1;
+}

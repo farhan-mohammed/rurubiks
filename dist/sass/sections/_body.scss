@@ -5,6 +5,8 @@
 }
 html,body{
     overflow: none;
+    overflow-y:hidden;
+    overflow-x: hidden;
     height: 100vh;
     width: 100vw;
 }
@@ -50,5 +52,16 @@ html {
     }
     &-body{
         flex:1;
+        @include flexAndCenter;
+        padding-bottom: 10vh;
+        position: fixed;
+        top:$header-height;
+        left:0;
+        width:100vw;
+        height: calc(100vh - 3rem);
     }
+}
+
+@function re($x){
+    @return $x;
 }

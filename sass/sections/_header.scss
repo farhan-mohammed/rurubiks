@@ -1,0 +1,67 @@
+.header{
+    @include flexAndCenter;
+    &-logo{
+        @include flexAndCenter;
+        flex:0;
+        margin-right: .5vw;
+        @media (min-width:500px){
+            margin-right: 2rem;
+        }
+        @media (min-width:900px){
+            margin-right: 4rem;
+        }
+    }
+    &-nav{
+        flex:1;
+        height:100%;
+    }
+}
+.hl{
+    &-img{
+        height: $header-logo;
+        width: $header-logo;
+        margin: 0 .6rem;
+    }
+    &-title{
+        display: inline-block;
+        font-family: 'Roboto Slab';
+        color: #FFF;
+    }
+}
+.hnav{
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    list-style: none;
+    padding:0;
+    margin: 0;
+    width: 100%;
+    height:100%;
+    &-item{
+        color:white;
+        flex:1;
+        margin: .4rem;
+        border-radius: 1px;
+        margin-right: 0;
+        padding: 5px;
+        text-align: center;
+        @include flexAndCenter;
+
+        font-family: 'Raleway';
+        text-transform: uppercase;
+        font-weight: 200;
+        text-shadow: black 0px 3px 20px;
+        &:nth-child(1){
+            background-color: $cube-red;
+        }
+        &:nth-child(2){
+            background-color: $cube-blue;
+        }
+        &:nth-child(3){
+            background-color: $cube-orange;
+        }
+        &:nth-child(4){
+            background-color: $cube-green;
+        }
+    }
+}
